@@ -1,0 +1,280 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+#completed-state {
+  display: none;
+}
+
+.credit-card {
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.front-of-card {
+  background-image: url(../images/bg-card-front.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.front-of-card .logo img {
+  width: 50px;
+  margin: 20px 0px 0px 20px;
+}
+
+.front-of-card .credit-card-number {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+}
+
+.credit-card-form {
+  max-width: 325px;
+  margin: 80px auto 0;
+  font-size: 1.2rem;
+}
+
+.front-of-card p,
+.back-of-card p {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.8rem;
+}
+
+.back-of-card {
+  background-image: url(../images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#credit-card-form label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(278, 68%, 11%);
+  margin-top: 5px;
+}
+input {
+  font-size: 1.6rem;
+  border: 0.5px solid hsl(279, 6%, 55%);
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+  color: hsl(279, 6%, 55%);
+  padding: 10px;
+  margin: 10px 0px 25px 0px;
+  width: 100%;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%))
+    2;
+  border-radius: 5px;
+}
+
+button {
+  color: hsl(270, 3%, 87%);
+  background: hsl(278, 68%, 11%);
+  border: none;
+  margin: 20px auto;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+.flex-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-form > div {
+  flex: 1;
+}
+
+.flex-form div:nth-child(3) {
+  flex: 2;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.confirm {
+  text-align: center;
+}
+.confirm h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.confirm h3 {
+  margin-top: 20px;
+  color: hsl(279, 6%, 55%);
+}
+.error-message {
+  display: block;
+  color: hsl(0, 100%, 66%);
+  margin: 0;
+  margin-top: -15px;
+}
+
+.input-error-styling {
+  border: 1px solid hsl(0, 100%, 66%);
+  border-radius: 5px;
+}
+
+@media (max-width: 50em) {
+  .credit-card {
+    height: 225px;
+    width: 100%;
+    background-image: url(../images/bg-main-mobile.png);
+  }
+
+  .front-of-card {
+    position: relative;
+    height: 180px;
+    width: 270px;
+    top: 125px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  .front-of-card .flex p {
+    margin: 23px 20px 0px 19px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .back-of-card {
+    height: 180px;
+    width: 270px;
+    position: relative;
+    top: -139px;
+    left: 87px;
+    z-index: 1;
+  }
+
+  p.cvv-code {
+    position: relative;
+    top: 66px;
+    left: 210px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 50em) and (max-width: 75em) {
+  main {
+    display: flex;
+  }
+  .credit-card {
+    height: 100vh;
+    width: 43%;
+    max-width: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-main-desktop.png);
+  }
+
+  .front-of-card {
+    height: 220px;
+    width: 320px;
+  }
+
+  .back-of-card {
+    height: 220px;
+    width: 320px;
+  }
+
+  p.cvv-code {
+    font-size: 1.2rem;
+    margin: 76px 40px 0px 240px;
+  }
+
+  .front-of-card .flex p {
+    margin: 23px 20px 0px 19px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .credit-card-form {
+    margin-top: 250px;
+  }
+}
+@media (min-width: 75em) {
+  .credit-card {
+    height: 100vh;
+    width: 33vw;
+    max-width: 475px;
+    position: relative;
+    background-image: url(../images/bg-main-desktop.png);
+  }
+
+  .front-of-card {
+    position: absolute;
+    height: 250px;
+    width: 370px;
+    top: 145px;
+    left: 200px;
+    z-index: 2;
+  }
+
+  .front-of-card .credit-card-number {
+    margin: 70px 30px 0px 5px;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+  }
+
+  .front-of-card .flex p {
+    margin: 23px 20px 0px 22px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .back-of-card {
+    height: 250px;
+    width: 370px;
+    position: absolute;
+    top: 375px;
+    left: 260px;
+    z-index: 1;
+  }
+
+  p.cvv-code {
+    position: relative;
+    top: 93px;
+    left: 300px;
+    font-size: 1.2rem;
+  }
+  .credit-card-form {
+    margin-top: 200px;
+  }
+
+  main {
+    display: flex;
+  }
+}

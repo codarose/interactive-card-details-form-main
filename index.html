@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="credit-card">
+        <section class="front-of-card">
+          <div class="logo"><img src="images/card-logo.svg" alt="" /></div>
+          <p class="credit-card-number">0000 0000 0000 0000</p>
+          <div class="flex">
+            <p class="card-holder-name">Jane Appleseed</p>
+            <p class="expiry-date">00/00</p>
+          </div>
+        </section>
+        <section class="back-of-card">
+          <p class="cvv-code">000</p>
+        </section>
+      </section>
+      <section class="credit-card-form">
+        <form action="submit" id="credit-card-form" class="credit-card-info">
+          <label for="cardholdername">Cardholder Name</label><br />
+          <input
+            type="text"
+            id="cardholdername"
+            name="cardholdername"
+            value="e.g. Jane Appleseed"
+            onfocus="this.value=''"
+          />
+          <span class="error-message" id="name-error"></span>
+          <br />
+
+          <label for="cardnumber">Card Number</label><br />
+          <input
+            type="text"
+            id="cardnumber"
+            name="cardnumber"
+            value="e.g. 1234 5678 9123 0000"
+            onfocus="this.value=''"
+            maxlength="16"
+          />
+          <span class="error-message" id="card-number-error"></span>
+          <br />
+
+          <div class="flex-form">
+            <div>
+              <label for="month">Exp. Date</label>
+              <input
+                type="text"
+                name="month"
+                onfocus="this.value=''"
+                id="month"
+                value="MM"
+                maxlength="2"
+              />
+              <span class="error-message" id="month-error"></span>
+            </div>
+            <div>
+              <label for="year"> (MM/YY)</label>
+              <input
+                type="text"
+                id="year"
+                name="year"
+                onfocus="this.value=''"
+                value="YY"
+                maxlength="2"
+              />
+              <span class="error-message" id="year-error"></span>
+            </div>
+            <div>
+              <label for="cvv">CVV</label>
+
+              <input
+                type="text"
+                onfocus="this.value=''"
+                name="cvv"
+                id="cvv"
+                value="e.g. 123"
+                maxlength="3"
+              />
+              <span class="error-message" id="cvv-error"></span>
+            </div>
+          </div>
+          <button id="submit-button" type="submit">Confirm</button>
+        </form>
+        <!-- Completed state start -->
+        <section id="completed-state">
+          <section class="confirm">
+            <div class="complete-icon">
+              <img src="images/icon-complete.svg" alt="" />
+            </div>
+            <h2>Thank you!</h2>
+            <h3>We've added your card details</h3>
+            <button id="reset-form">Continue</button>
+          </section>
+        </section>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Esther Rose</a>.
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
